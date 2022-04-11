@@ -1,0 +1,402 @@
+/* =============================fonts============================= */
+@font-face {
+  font-family: "nazanin";
+  src: url("./font/B_NAZANIN/B-NAZANIN.TTF");
+}
+
+@font-face {
+  font-family: "titr";
+  src: url("./font/B-Titr/B\ Titr\ Bold_0.ttf");
+}
+
+/* ===========================Auxiliary=========================== */
+.hide {
+  display: none;
+}
+
+.active {
+  display: block;
+}
+
+/* =============================All============================= */
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.countainer {
+  max-width: 100%;
+  height: 225vh;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  background: url("./img/background1.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+/* =============================sidebar============================= */
+.sidebar {
+  flex-basis: 25%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+.sidebar .introduction {
+  padding: 25px;
+  text-align: center;
+}
+
+.sidebar .introduction .img img {
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  margin-bottom: 20px;
+}
+
+.sidebar .introduction h1 {
+  direction: rtl;
+  color: #fff;
+  font-family: titr;
+}
+
+.sidebar .introduction p {
+  direction: rtl;
+  color: #fff;
+  font-family: nazanin;
+  font-size: 17px;
+  font-weight: bold;
+}
+
+/* ===================movies=================== */
+.movies {
+  flex-basis: 70%;
+  height: 90%;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(3, 440px);
+  margin-top: 20px;
+}
+
+.movies .card {
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  height: 400px;
+  width: 250px;
+  transition: 1s;
+  background-color: #fff;
+  border-radius: 10px;
+  position: relative;
+}
+
+.movies .card:hover {
+  transform: translateY(-8px);
+}
+
+.movies .card img {
+  width: 100%;
+  height: 300px;
+  border-top-right-radius: 10px;
+  border-top-left-radius: 10px;
+  background-size: cover;
+  cursor: pointer;
+}
+
+.movies .card .price-movie {
+  padding-left: 40px;
+  font-size: 18px;
+}
+
+.movies .card .icons {
+  background-color: #ffffff98;
+  width: 80px;
+  display: flex;
+  justify-content: space-between;
+  border-radius: 10px;
+  position: absolute;
+  right: 2px;
+  top: 2px;
+  color: #000;
+  box-sizing: border-box;
+}
+
+.movies .card .icons .count-movie {
+  font-family: sans-serif;
+  font-size: 18px;
+}
+
+.movies .card .icons i {
+  cursor: pointer;
+  transition: 0.3s;
+  padding: 5px;
+}
+
+.movies .card .icons i:hover {
+  color: #ff0000;
+}
+
+.movies .card .forbbiden {
+  width: 0%;
+  opacity: 0;
+  text-align: center;
+  font-family: nazanin;
+  padding: 10px;
+  background-color: #ffffff98;
+  position: absolute;
+  right: 0px;
+  top: 30px;
+  font-size: 20px;
+  color: #000;
+  font-weight: bold;
+  border-bottom-left-radius: 10px;
+  border-top-left-radius: 10px;
+  transition: all 0.6s;
+}
+
+.movies .card .forbbiden .red {
+  color: #ff0000;
+}
+
+/* =================================Sidebar.buy================================= */
+.buy {
+  width: 100%;
+  text-align: center;
+  margin-top: 50px;
+  position: relative;
+}
+
+.buy .icon-trash {
+  background-color: #ff0000;
+  width: 35px;
+  height: 35px;
+  position: absolute;
+  border-radius: 50%;
+  left: 202px;
+  text-align: center;
+}
+
+.buy .icon-trash i {
+  font-size: 20px;
+  color: rgb(255, 255, 255);
+  margin-top: 5px;
+  cursor: pointer;
+}
+
+.buy .icon-basket {
+  width: 120px;
+}
+
+.buy .menu-buy {
+  width: 80%;
+  margin: 20px auto;
+  background-color: #fff;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  border-radius: 20px;
+  padding: 20px;
+}
+
+.buy .menu-buy p strong {
+  font-size: 25px;
+  padding: 0 10px;
+  font-family: sans-serif;
+}
+
+.buy .menu-buy p span {
+  font-size: 25px;
+  font-family: sans-serif;
+}
+
+.buy .menu-buy .btn {
+  width: 100%;
+}
+
+.buy .menu-buy .countinue {
+  padding: 5px;
+  width: 80%;
+  font-size: 30px;
+  border-radius: 30px;
+  background-color: #000;
+  color: #fff;
+  transition: 0.6s;
+}
+
+.buy .menu-buy .countinue:hover {
+  color: #000000;
+  background-color: #ffffff;
+}
+
+/* ==============================================Responsive============================================== */
+@media screen and (max-width: 900px) {
+  /* =================================sidebar================================= */
+  .sidebar {
+    flex-basis: 30%;
+    height: 470vh;
+  }
+
+  .sidebar .introduction {
+    padding: 15px;
+  }
+
+  .sidebar .introduction .img img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    margin-bottom: 10px;
+  }
+
+  .sidebar .introduction h1 {
+    font-size: 17px;
+  }
+
+  .sidebar .introduction p {
+    font-size: 12px;
+  }
+
+  /* =================================movie================================= */
+  .movies {
+    flex-basis: 70%;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(8, 380px);
+  }
+
+  .movies .card {
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    height: 350px;
+    width: 250px;
+    margin: auto;
+  }
+
+  .movies .card:hover {
+    transform: translateY(-8px);
+  }
+
+  .movies .card img {
+    width: 100%;
+    height: 250px;
+  }
+
+  .movies .card .price-movie {
+    padding-left: 50px;
+    font-size: 17px;
+  }
+
+  .movies .card .forbbiden {
+    padding: 5px;
+    font-size: 15px;
+  }
+
+  /* =================================sidbar.buy================================= */
+  .buy {
+    margin-top: 30px;
+  }
+
+  .buy .icon-trash {
+    left: 97px;
+  }
+
+  .buy .menu-buy {
+    width: 90%;
+    margin: 10px auto;
+    padding: 10px;
+  }
+
+  .buy .menu-buy p strong {
+    font-size: 17px;
+    padding: 0;
+  }
+
+  .buy .menu-buy p span {
+    font-size: 17px;
+  }
+
+  .buy .menu-buy .btn {
+    width: 100%;
+  }
+
+  .buy .menu-buy .countinue {
+    font-size: 20px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  /* =================================sidebar================================= */
+  .sidebar {
+    flex-basis: 50%;
+    height: 1230vh;
+  }
+
+  .sidebar .introduction {
+    padding: 15px;
+  }
+
+  .sidebar .introduction .img img {
+    width: 200px;
+    height: 200px;
+  }
+
+  .sidebar .introduction h1 {
+    font-size: 35px;
+  }
+
+  .sidebar .introduction p {
+    font-size: 20px;
+  }
+
+  /* =================================movie================================= */
+  .movies {
+    flex-basis: 50%;
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: repeat(16, 480px);
+  }
+
+  .movies .card {
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    height: 450px;
+    width: 250px;
+    margin: auto;
+  }
+
+  .movies .card img {
+    width: 100%;
+    height: 350px;
+  }
+
+  .movies .card .forbbiden {
+    padding: 5px;
+    font-size: 22px;
+  }
+
+  /* =================================sidbar.buy================================= */
+  .buy .icon-trash {
+    left: 112px;
+  }
+
+  .buy .menu-buy {
+    width: 90%;
+    margin: 10px auto;
+    padding: 10px;
+  }
+
+  .buy .menu-buy p strong {
+    font-size: 22px;
+    padding: 0;
+  }
+
+  .buy .menu-buy p span {
+    font-size: 22px;
+  }
+
+  .buy .menu-buy .btn {
+    width: 100%;
+  }
+
+  .buy .menu-buy .countinue {
+    font-size: 27px;
+  }
+}
